@@ -40,6 +40,8 @@ environment:
   DESK_CRAWL4AI_URL: "http://tools.lan:11235"       # page fetching
 ```
 
+![The tool is glue: a small container, every dependency a URL to something already running](https://raw.githubusercontent.com/casareanderson/blog-kit/main/assets/internal-tool/01-glue.png)
+
 Three consequences fall straight out of that, and they are the whole architecture:
 
 - **The container stays small** (239 MB) because it contains no model weights, no
@@ -110,6 +112,8 @@ multi-tenant app it is the whole game.
 
 There are exactly three ways somebody gets in, and the app runs precisely one of them:
 
+![Three auth modes: solo, signin and proxy - the app runs exactly one](https://raw.githubusercontent.com/casareanderson/blog-kit/main/assets/internal-tool/02-modes.png)
+
 | Mode | Who authenticates | Use when |
 |---|---|---|
 | `solo` *(default)* | nobody | One person, one machine |
@@ -149,6 +153,8 @@ a plan by accident when you meant to promote a colleague.
 
 The last piece, and the one I would build earlier next time. As the operator I sometimes
 need to see what a client sees, because "it's broken" is not a bug report.
+
+![Support access: switch scope and stay yourself, rather than logging in as the customer](https://raw.githubusercontent.com/casareanderson/blog-kit/main/assets/internal-tool/03-support.png)
 
 The obvious implementation is to log in as them. **Don't.** The moment you can
 impersonate a user, no line in that account's history can be trusted to mean the person

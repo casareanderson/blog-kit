@@ -62,3 +62,15 @@ Rules that keep them readable on dev.to:
 ## What the posts are made of
 
 See [docs/ENDPOINTS.md](docs/ENDPOINTS.md) for the API details and the traps.
+
+## Written with this
+
+- [The hard part of an internal tool isn't the API. It's the second user.](https://dev.to/c1-anderson/the-hard-part-of-an-internal-tool-isnt-the-api-its-the-second-user-573h)
+  — the post whose diagrams live in `assets/internal-tool/`.
+
+More at [dev.to/c1-anderson](https://dev.to/c1-anderson).
+
+## Licence
+
+MIT. Take it, change it, ship it. If it saves you the afternoon it cost me,
+that is the whole point.

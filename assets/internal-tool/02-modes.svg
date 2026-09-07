@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="400" viewBox="0 0 880 400" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="880" height="400" fill="#ffffff"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#111827">Three ways in. The app runs exactly one.</text>
+  <text x="40" y="72" font-size="14" fill="#6b7280">If two are configured the proxy wins — because two authenticators means the weaker one decides.</text>
+
+  <g font-size="13">
+    <rect x="40" y="104" width="252" height="196" rx="10" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="60" y="134" font-size="15" font-weight="700" fill="#991b1b">solo</text>
+    <text x="60" y="156" fill="#7f1d1d">the default</text>
+    <text x="60" y="184" font-weight="600" fill="#111827">Who authenticates</text>
+    <text x="60" y="204" fill="#374151">nobody</text>
+    <text x="60" y="232" font-weight="600" fill="#111827">Use when</text>
+    <text x="60" y="252" fill="#374151">one person, one machine</text>
+    <text x="60" y="284" font-size="12" font-weight="700" fill="#b91c1c">⚠ fails silently, not loudly</text>
+
+    <rect x="314" y="104" width="252" height="196" rx="10" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="334" y="134" font-size="15" font-weight="700" fill="#166534">signin</text>
+    <text x="334" y="156" fill="#15803d" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">ACCOUNTS=1</text>
+    <text x="334" y="184" font-weight="600" fill="#111827">Who authenticates</text>
+    <text x="334" y="204" fill="#374151">the app — scrypt + sessions</text>
+    <text x="334" y="232" font-weight="600" fill="#111827">Use when</text>
+    <text x="334" y="252" fill="#374151">several people, no SSO</text>
+    <text x="334" y="284" font-size="12" fill="#166534">passwords are yours to reset</text>
+
+    <rect x="588" y="104" width="252" height="196" rx="10" fill="#eff6ff" stroke="#bfdbfe"/>
+    <text x="608" y="134" font-size="15" font-weight="700" fill="#1e40af">proxy</text>
+    <text x="608" y="156" fill="#1d4ed8" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">TRUST_PROXY=1</text>
+    <text x="608" y="184" font-weight="600" fill="#111827">Who authenticates</text>
+    <text x="608" y="204" fill="#374151">your forward-auth proxy</text>
+    <text x="608" y="232" font-weight="600" fill="#111827">Use when</text>
+    <text x="608" y="252" fill="#374151">you already run SSO</text>
+    <text x="608" y="284" font-size="12" font-weight="700" fill="#1e40af">⚠ a promise, not a feature</text>
+  </g>
+
+  <rect x="40" y="322" width="800" height="52" rx="8" fill="#111827"/>
+  <text x="60" y="346" font-size="13" font-weight="600" fill="#ffffff">Proxy mode means: this port cannot be reached except through the proxy.</text>
+  <text x="60" y="366" font-size="13" fill="#9ca3af">Identity headers are the proxy's output, not a credential — reach the port directly and you can claim any identity.</text>
+</svg>

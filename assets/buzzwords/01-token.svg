@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="330" viewBox="0 0 880 330" font-family="Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <rect width="880" height="330" fill="#ffffff"/>
+  <text x="40" y="46" font-size="21" font-weight="700" fill="#111827">A token is about ¾ of a word</text>
+  <text x="40" y="72" font-size="14" fill="#6b7280">Models do not read letters or words. Everything — speed, cost, memory — is counted in these.</text>
+
+  <text x="40" y="118" font-size="13" fill="#6b7280">the sentence you type</text>
+  <text x="40" y="146" font-size="19" fill="#111827" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">I run models on a homelab server</text>
+
+  <text x="40" y="192" font-size="13" fill="#6b7280">what the model actually sees</text>
+  <g font-size="15" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+    <rect x="40" y="206" width="34" height="34" rx="5" fill="#eef2ff" stroke="#c7d2fe"/><text x="52" y="229" fill="#3730a3">I</text>
+    <rect x="80" y="206" width="52" height="34" rx="5" fill="#eef2ff" stroke="#c7d2fe"/><text x="90" y="229" fill="#3730a3">run</text>
+    <rect x="138" y="206" width="66" height="34" rx="5" fill="#eef2ff" stroke="#c7d2fe"/><text x="148" y="229" fill="#3730a3">mod</text>
+    <rect x="210" y="206" width="46" height="34" rx="5" fill="#eef2ff" stroke="#c7d2fe"/><text x="220" y="229" fill="#3730a3">els</text>
+    <rect x="262" y="206" width="42" height="34" rx="5" fill="#eef2ff" stroke="#c7d2fe"/><text x="272" y="229" fill="#3730a3">on</text>
+    <rect x="310" y="206" width="30" height="34" rx="5" fill="#eef2ff" stroke="#c7d2fe"/><text x="318" y="229" fill="#3730a3">a</text>
+    <rect x="346" y="206" width="64" height="34" rx="5" fill="#eef2ff" stroke="#c7d2fe"/><text x="356" y="229" fill="#3730a3">home</text>
+    <rect x="416" y="206" width="46" height="34" rx="5" fill="#eef2ff" stroke="#c7d2fe"/><text x="426" y="229" fill="#3730a3">lab</text>
+    <rect x="468" y="206" width="76" height="34" rx="5" fill="#eef2ff" stroke="#c7d2fe"/><text x="478" y="229" fill="#3730a3">server</text>
+  </g>
+  <text x="560" y="229" font-size="14" fill="#6b7280">7 words → 9 tokens</text>
+
+  <rect x="40" y="266" width="800" height="44" rx="8" fill="#111827"/>
+  <text x="60" y="294" font-size="13" fill="#ffffff">Measured on my box, same question:  llama3.2 <tspan font-weight="700">23.8 tok/s</tspan>  ·  qwen2.5-7b <tspan font-weight="700">12.6</tspan>  ·  qwen3.5 <tspan font-weight="700">5.3</tspan>  — 18 words a second versus four.</text>
+</svg>

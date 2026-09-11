@@ -1,0 +1,257 @@
+{
+ "4620979": {
+  "query": [
+   "money changer counting coins",
+   "banker weighing gold coins",
+   "merchant accounts ledger interior"
+  ],
+  "why": "swapping one paid agent for another is a bookkeeping decision, not a technical one",
+  "artwork": "Man Weighing Gold",
+  "artist": "Adriaen Isenbrant",
+  "date": "ca. 1515\u201320",
+  "met_id": 436722,
+  "matched_query": "banker weighing gold coins",
+  "score": 6,
+  "file": "covers/4620979.png"
+ },
+ "4615294": {
+  "query": [
+   "market scene vendors stall produce",
+   "peasants selling goods market square",
+   "still life fish market stall"
+  ],
+  "why": "the article is about where a price actually comes from - the oldest question in any market",
+  "artwork": "Fish Market",
+  "artist": "Joachim Beuckelaer",
+  "date": "1568",
+  "met_id": 679844,
+  "matched_query": "still life fish market stall",
+  "score": 5,
+  "file": "covers/4615294.png"
+ },
+ "4612833": {
+  "query": [
+   "blacksmith at his forge workshop",
+   "carpenter workshop tools interior",
+   "peasant cottage interior hearth"
+  ],
+  "why": "a small bench doing the work of a factory: the whole argument of the piece",
+  "artwork": "Venus and Mars Embracing as Vulcan Works at His Forge",
+  "artist": "Enea Vico",
+  "date": "1543",
+  "met_id": 361887,
+  "matched_query": "blacksmith at his forge workshop",
+  "score": 5,
+  "file": "covers/4612833.png"
+ },
+ "4609855": {
+  "query": [
+   "masked figures carnival masquerade",
+   "portrait of an unknown sitter mask",
+   "allegory vanity mirror portrait"
+  ],
+  "why": "a ticker is a label worn over a company, not the company itself",
+  "artwork": "Three half-length figures from a Venetian carnival",
+  "artist": "Niccol\u00f2 Cavalli",
+  "date": "1750\u20131822",
+  "met_id": 815461,
+  "matched_query": "masked figures carnival masquerade",
+  "score": 4,
+  "file": "covers/4609855.png"
+ },
+ "4604386": {
+  "query": [
+   "housekeeper with keys at her belt",
+   "servant maid kitchen interior work",
+   "steward household accounts"
+  ],
+  "why": "handing a steward some of the keys but not all of them - exactly what the article describes",
+  "artwork": "A Maid Asleep",
+  "artist": "Johannes Vermeer",
+  "date": "ca. 1656\u201357",
+  "met_id": 437878,
+  "matched_query": "servant maid kitchen interior work",
+  "score": 5,
+  "file": "covers/4604386.png"
+ },
+ "4600626": {
+  "query": [
+   "city gate archway entrance",
+   "toll gate travellers road",
+   "classical archway ruins gateway"
+  ],
+  "why": "a paywall is a tollgate, and the point is that the gate is thinner than it looks",
+  "artwork": "Porte de la Reine at Aigues-Mortes",
+  "artist": "Jean-Fr\u00e9d\u00e9ric Bazille",
+  "date": "1867",
+  "met_id": 435626,
+  "matched_query": "city gate archway entrance",
+  "score": 2,
+  "file": "covers/4600626.png"
+ },
+ "4599260": {
+  "query": [
+   "teacher instructing pupils interior",
+   "philosopher lecturing students",
+   "two figures conversation lesson"
+  ],
+  "why": "the second user is the one you finally have to explain it to",
+  "artwork": "Philosophers Instructing Pupils by an Antique Sarcophagus",
+  "artist": "Lorenzo Baldiserra Tiepolo",
+  "date": "mid-18th century",
+  "met_id": 459943,
+  "matched_query": "teacher instructing pupils interior",
+  "score": 5,
+  "file": "covers/4599260.png"
+ },
+ "4596250": {
+  "query": [
+   "woman reading a letter",
+   "letter correspondence writing desk",
+   "young woman opening letter interior"
+  ],
+  "why": "9,133 letters opened by something that was only ever meant to look at them",
+  "artwork": "A Woman Reading",
+  "artist": "Camille Corot",
+  "date": "1869 and 1870",
+  "met_id": 435991,
+  "matched_query": "woman reading a letter",
+  "score": 5,
+  "file": "covers/4596250.png"
+ },
+ "4593582": {
+  "query": [
+   "bridge over river landscape",
+   "stone bridge crossing water",
+   "river crossing ferry landscape"
+  ],
+  "why": "a mesh VPN is a private bridge between places that cannot otherwise reach each other",
+  "artwork": "Landscape with a House near a Bridge over a River",
+  "artist": "Albert Meyeringh",
+  "date": "n.d.",
+  "met_id": 364879,
+  "matched_query": "bridge over river landscape",
+  "score": 8,
+  "file": "covers/4593582.png"
+ },
+ "4590655": {
+  "query": [
+   "casket coffer lock ornament",
+   "chest strongbox iron lock",
+   "key lock metalwork ornament"
+  ],
+  "why": "one secret, one home, one lock",
+  "artwork": "Strongbox with clockwork",
+  "artist": "Alexander Fromery",
+  "date": "1750",
+  "met_id": 889195,
+  "matched_query": "chest strongbox iron lock",
+  "score": 5,
+  "file": "covers/4590655.png"
+ },
+ "4590639": {
+  "query": [
+   "harvesters working in a field",
+   "labourers working together landscape",
+   "workshop many craftsmen working"
+  ],
+  "why": "six jobs, one shared board, a workshop floor rather than a lone genius",
+  "artwork": "The Harvesters",
+  "artist": "Pieter Bruegel the Elder",
+  "date": "1565",
+  "met_id": 435809,
+  "matched_query": "harvesters working in a field",
+  "score": 4,
+  "file": "covers/4590639.png"
+ },
+ "4590638": {
+  "query": [
+   "family group portrait interior",
+   "architectural elevation drawing plan",
+   "large family portrait household"
+  ],
+  "why": "an org chart is just an elevation drawing of a company",
+  "artwork": "The Jabach Family",
+  "artist": "Charles Le Brun",
+  "date": "ca. 1660",
+  "met_id": 626692,
+  "matched_query": "family group portrait interior",
+  "score": 5,
+  "file": "covers/4590638.png"
+ },
+ "4590625": {
+  "query": [
+   "soldier standing guard halberd",
+   "sentry watchman armour portrait",
+   "guard at a doorway armed"
+  ],
+  "why": "Authelia is the watchman at the door, and the article is about what the watchman missed",
+  "artwork": "A Standing Grenadier of the Municipal Guard",
+  "artist": "Edouard Detaille",
+  "date": "1891",
+  "met_id": 359213,
+  "matched_query": "soldier standing guard halberd",
+  "score": 5,
+  "file": "covers/4590625.png"
+ },
+ "4590624": {
+  "query": [
+   "vanitas still life skull",
+   "still life skull hourglass candle",
+   "memento mori skull"
+  ],
+  "why": "the perfect match: every bot reported success and there was nothing behind it",
+  "artwork": "Vanitas Still Life",
+  "artist": "Jacques de Gheyn II",
+  "date": "1603",
+  "met_id": 436485,
+  "matched_query": "vanitas still life skull",
+  "score": 8,
+  "file": "covers/4590624.png"
+ },
+ "4588009": {
+  "query": [
+   "messenger on horseback delivering dispatch",
+   "courier horseman journey road",
+   "postman letter delivery"
+  ],
+  "why": "the query was never delivered, and the resolver called it a timeout",
+  "artwork": "The Dispatch-Bearer",
+  "artist": "Giovanni Boldini",
+  "date": "?1879",
+  "met_id": 435694,
+  "matched_query": "messenger on horseback delivering dispatch",
+  "score": 3,
+  "file": "covers/4588009.png"
+ },
+ "4580541": {
+  "query": [
+   "musicians reading sheet music",
+   "concert players instruments interior",
+   "lute player music score"
+  ],
+  "why": "reading the notation wrong - a boolean where a track was expected",
+  "artwork": "The Musicians",
+  "artist": "Caravaggio (Michelangelo Merisi)",
+  "date": "1597",
+  "met_id": 435844,
+  "matched_query": "musicians reading sheet music",
+  "score": 5,
+  "file": "covers/4580541.png"
+ },
+ "4580491": {
+  "query": [
+   "classical ruins architecture landscape",
+   "ruined temple columns landscape",
+   "capriccio ruins tomb"
+  ],
+  "why": "graceful degradation made visible; it is the working one that collapses",
+  "artwork": "Landscape with Classical Architecture by a Lake",
+  "artist": "Anonymous, French, 17th century",
+  "date": "17th century",
+  "met_id": 339951,
+  "matched_query": "classical ruins architecture landscape",
+  "score": 6,
+  "file": "covers/4580491.png"
+ }
+}

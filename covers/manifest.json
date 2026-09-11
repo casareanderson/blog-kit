@@ -12,7 +12,9 @@
   "met_id": 436722,
   "matched_query": "banker weighing gold coins",
   "score": 6,
-  "file": "covers/4620979.png"
+  "file": "covers/v2-4620979.png",
+  "source": "generated",
+  "prompt": "a mechanical keyboard and a small terminal screen glowing green in a dark room, close up on the keys"
  },
  "4615294": {
   "query": [
@@ -27,7 +29,9 @@
   "met_id": 679844,
   "matched_query": "still life fish market stall",
   "score": 5,
-  "file": "covers/4615294.png"
+  "file": "covers/v2-4615294.png",
+  "source": "generated",
+  "prompt": "a row of small second-hand objects arranged on a plain table with blank paper price labels beside them"
  },
  "4612833": {
   "query": [
@@ -42,7 +46,9 @@
   "met_id": 361887,
   "matched_query": "blacksmith at his forge workshop",
   "score": 5,
-  "file": "covers/4612833.png"
+  "file": "covers/v2-4612833.png",
+  "source": "generated",
+  "prompt": "a small fanless single board computer beside two stacked 3.5 inch hard disk drives, bare circuit board, aluminium heatsink"
  },
  "4609855": {
   "query": [
@@ -57,7 +63,9 @@
   "met_id": 815461,
   "matched_query": "masked figures carnival masquerade",
   "score": 4,
-  "file": "covers/4609855.png"
+  "file": "covers/v2-4609855.png",
+  "source": "generated",
+  "prompt": "a vintage stock ticker tape machine under glass, brass and steel, paper tape curling out"
  },
  "4604386": {
   "query": [
@@ -72,7 +80,9 @@
   "met_id": 437878,
   "matched_query": "servant maid kitchen interior work",
   "score": 5,
-  "file": "covers/4604386.png"
+  "file": "covers/v2-4604386.png",
+  "source": "generated",
+  "prompt": "a wall mounted smart home control panel and a small sensor, matte white plastic, soft indicator light"
  },
  "4600626": {
   "query": [
@@ -87,7 +97,9 @@
   "met_id": 435626,
   "matched_query": "city gate archway entrance",
   "score": 2,
-  "file": "covers/4600626.png"
+  "file": "covers/v2-4600626.png",
+  "source": "generated",
+  "prompt": "a folded newspaper with a small brass padlock resting on top of it"
  },
  "4599260": {
   "query": [
@@ -102,7 +114,9 @@
   "met_id": 459943,
   "matched_query": "teacher instructing pupils interior",
   "score": 5,
-  "file": "covers/4599260.png"
+  "file": "covers/v2-4599260.png",
+  "source": "generated",
+  "prompt": "two identical office desks side by side, one tidy and one cluttered, empty chairs, overhead light"
  },
  "4596250": {
   "query": [
@@ -117,7 +131,9 @@
   "met_id": 435991,
   "matched_query": "woman reading a letter",
   "score": 5,
-  "file": "covers/4596250.png"
+  "file": "covers/v2-4596250.png",
+  "source": "generated",
+  "prompt": "an overflowing metal letter tray stacked high with unopened envelopes on a desk"
  },
  "4593582": {
   "query": [
@@ -132,7 +148,9 @@
   "met_id": 364879,
   "matched_query": "bridge over river landscape",
   "score": 8,
-  "file": "covers/4593582.png"
+  "file": "covers/v2-4593582.png",
+  "source": "generated",
+  "prompt": "a network patch panel with many coloured ethernet cables neatly routed, rack mounted"
  },
  "4590655": {
   "query": [
@@ -147,7 +165,9 @@
   "met_id": 889195,
   "matched_query": "chest strongbox iron lock",
   "score": 5,
-  "file": "covers/4590655.png"
+  "file": "covers/v2-4590655.png",
+  "source": "generated",
+  "prompt": "a small heavy steel safe with a single brass key lying in front of it"
  },
  "4590639": {
   "query": [
@@ -162,7 +182,9 @@
   "met_id": 435809,
   "matched_query": "harvesters working in a field",
   "score": 4,
-  "file": "covers/4590639.png"
+  "file": "covers/v2-4590639.png",
+  "source": "generated",
+  "prompt": "a large cork board covered in coloured index cards and pins, arranged in columns"
  },
  "4590638": {
   "query": [
@@ -177,7 +199,9 @@
   "met_id": 626692,
   "matched_query": "family group portrait interior",
   "score": 5,
-  "file": "covers/4590638.png"
+  "file": "covers/v2-4590638.png",
+  "source": "generated",
+  "prompt": "a server rack full of rackmount servers seen head on, status lights glowing, cable management arms"
  },
  "4590625": {
   "query": [
@@ -192,7 +216,9 @@
   "met_id": 359213,
   "matched_query": "soldier standing guard halberd",
   "score": 5,
-  "file": "covers/4590625.png"
+  "file": "covers/v2-4590625.png",
+  "source": "generated",
+  "prompt": "a heavy steel door with an electronic access reader mounted beside it, single indicator light"
  },
  "4590624": {
   "query": [
@@ -207,7 +233,9 @@
   "met_id": 436485,
   "matched_query": "vanitas still life skull",
   "score": 8,
-  "file": "covers/4590624.png"
+  "file": "covers/v2-4590624.png",
+  "source": "generated",
+  "prompt": "a wall of financial trading screens showing abstract green and red candlestick charts, out of focus"
  },
  "4588009": {
   "query": [
@@ -222,7 +250,9 @@
   "met_id": 435694,
   "matched_query": "messenger on horseback delivering dispatch",
   "score": 3,
-  "file": "covers/4588009.png"
+  "file": "covers/v2-4588009.png",
+  "source": "generated",
+  "prompt": "a small network router with blinking status lights and an ethernet cable half unplugged"
  },
  "4580541": {
   "query": [
@@ -237,7 +267,9 @@
   "met_id": 435844,
   "matched_query": "musicians reading sheet music",
   "score": 5,
-  "file": "covers/4580541.png"
+  "file": "covers/v2-4580541.png",
+  "source": "generated",
+  "prompt": "studio headphones resting on a mixing desk beside faders and knobs"
  },
  "4580491": {
   "query": [
@@ -252,6 +284,8 @@
   "met_id": 339951,
   "matched_query": "classical ruins architecture landscape",
   "score": 6,
-  "file": "covers/4580491.png"
+  "file": "covers/v2-4580491.png",
+  "source": "generated",
+  "prompt": "a large graphics card with dual fans lying on an antistatic mat, PCIe connector visible, dust on the shroud"
  }
 }

@@ -52,6 +52,12 @@ MET = "https://collectionapi.metmuseum.org/public/collection/v1"
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/125.0 Safari/537.36"}
 CREDIT = "The Metropolitan Museum of Art · public domain"
+# Generated covers get their own credit line. Labelling it is deliberate: the
+# alternative is passing a synthetic image off as a photograph, and several of
+# the channels in reach.py have rules about AI content that are the author's
+# to comply with, not mine to hide.
+GEN_CREDIT = "Illustration generated locally · Stable Diffusion 1.5"
+PROMPTS = os.path.join(ROOT, "artprompts.json")
 
 
 def _font(name, size):
@@ -153,8 +159,10 @@ def compose(title, art, path):
 
     # --- artwork, CONTAINED not cropped ---------------------------------
     box_x, box_y, box_w, box_h = 56, 60, 300, 300
-    raw = Image.open(urllib.request.urlopen(
-        urllib.request.Request(art["image_url"], headers=UA), timeout=60))
+    src = art["image_url"]
+    raw = (Image.open(src[7:]) if src.startswith("file://")
+           else Image.open(urllib.request.urlopen(
+               urllib.request.Request(src, headers=UA), timeout=60)))
     raw = raw.convert("RGB")
     raw.thumbnail((box_w, box_h), Image.LANCZOS)
     ox = box_x + (box_w - raw.width) // 2
@@ -179,8 +187,11 @@ def compose(title, art, path):
     who = art.get("artistDisplayName") or "Unknown artist"
     what = (art.get("title") or "").replace("\n", " ")
     when = art.get("objectDate") or ""
-    cred = f"{who} · {what}" + (f", {when}" if when else "")
-    cred_lines = _wrap(d, cred, fm, tw)[:2]
+    if art.get("artistDisplayName") or art.get("title"):
+        cred = f"{who} · {what}" + (f", {when}" if when else "")
+        cred_lines = _wrap(d, cred, fm, tw)[:2]
+    else:
+        cred_lines = []   # generated art has no artist or date to cite
 
     RULE_GAP, CRED_LH = 20, 20
     block_h = (len(lines) * lh) + RULE_GAP + 18 + (len(cred_lines) * CRED_LH) + 18
@@ -197,7 +208,7 @@ def compose(title, art, path):
     for ln in cred_lines:
         d.text((tx, ty), ln, font=fm, fill=MUTED)
         ty += CRED_LH
-    d.text((tx, ty), CREDIT,
+    d.text((tx, ty), art.get("_credit", CREDIT),
            font=_font("IBMPlexMono-Regular.ttf", 13), fill=FAINT)
 
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -259,6 +270,40 @@ def cmd_recompose(ids):
         print(f"{aid}  redrawn  {m['artist']} — {m['artwork']}")
 
 
+def cmd_gen(ids):
+    """Generate an on-topic 512x512 inset per article and compose the banner.
+
+    512 square because the banner's artwork slot is a 300px square and 512 is
+    SD1.5's native size — asking a 1.5 checkpoint for a banner-shaped latent
+    duplicates the subject. At 300px the gibberish silkscreen text that SD1.5
+    always produces is no longer legible, which is why hardware subjects work
+    here and screen-UI subjects do not.
+    """
+    import comfy
+    spec = json.load(open(PROMPTS))
+    neg, style = spec["_negative"], spec["_style"]
+    arts = articles()
+    os.makedirs(OUT, exist_ok=True)
+    man_path = os.path.join(OUT, "manifest.json")
+    man = json.load(open(man_path)) if os.path.exists(man_path) else {}
+    for aid, sp in spec.items():
+        if aid.startswith("_") or (ids and aid not in ids):
+            continue
+        raw = os.path.join(OUT, f"gen-{aid}.png")
+        # Seed from the article id: the same article regenerates identically,
+        # so a rebuild is reproducible rather than a fresh roll of the dice.
+        comfy.generate(sp["p"] + style, neg, int(aid) % 2**31, raw)
+        art = {"image_url": "file://" + raw, "artistDisplayName": None,
+               "title": None, "objectDate": None, "_credit": GEN_CREDIT,
+               "_prompt": sp["p"]}
+        compose(arts[aid]["title"], art, os.path.join(OUT, f"{aid}.png"))
+        man.setdefault(aid, {})
+        man[aid].update({"source": "generated", "prompt": sp["p"],
+                         "file": f"covers/{aid}.png"})
+        print(f"{aid}  generated  {sp['p'][:58]}")
+    json.dump(man, open(man_path, "w"), indent=1)
+
+
 def cmd_push():
     subprocess.run(["git", "add", "covers"], cwd=ROOT, check=True)
     subprocess.run(["git", "commit", "-m",
@@ -267,24 +312,64 @@ def cmd_push():
     subprocess.run(["git", "push", "origin", BRANCH], cwd=ROOT, check=True)
 
 
-def raw_url(aid):
-    return f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/covers/{aid}.png"
+def raw_url(aid, man=None):
+    """⚠️ The filename is read from the manifest, NOT built from the id.
+
+    dev.to does not store the cover — it proxies it through media2.dev.to with
+    the origin URL embedded, and that proxy CACHES. Replacing a cover at the
+    SAME url therefore keeps serving the old image for as long as the cache
+    holds. A new generation must land on a new path so the url itself changes.
+    """
+    man = man or json.load(open(os.path.join(OUT, "manifest.json")))
+    f = man[aid].get("file", f"covers/{aid}.png")
+    return f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/{f}"
 
 
 def cmd_apply(ids):
+    """Set each article's cover, idempotently.
+
+    ⚠️ dev.to rate-limits article UPDATES hard — a straight loop over 17
+    articles gets HTTP 429 on roughly half of them. So: re-read what is
+    already set and skip it (this is safe to re-run), space the writes out,
+    and back off on a 429 rather than burning the attempt.
+    """
     k = hs.get("dev-to", path="/Devto")
     man = json.load(open(os.path.join(OUT, "manifest.json")))
+    live = {str(a["id"]): a for a in requests.get(
+        "https://dev.to/api/articles/me/all", headers={"api-key": k},
+        params={"per_page": 100}, timeout=30).json()}
+
+    todo = []
     for aid in man:
         if ids and aid not in ids:
             continue
-        r = requests.put(f"https://dev.to/api/articles/{aid}",
-                         headers={"api-key": k},
-                         json={"article": {"main_image": raw_url(aid)}}, timeout=30)
-        print(f"{aid}  HTTP {r.status_code}  {raw_url(aid)}")
+        # The cover comes back wrapped in dev.to's image proxy, so the test is
+        # "does the current cover point at our file", not string equality.
+        cur = live.get(aid, {}).get("cover_image") or ""
+        if man[aid]["file"] in urllib.parse.unquote(cur):
+            print(f"{aid}  already set — skipped")
+            continue
+        todo.append(aid)
+
+    for n, aid in enumerate(todo):
+        for attempt in range(6):
+            r = requests.put(f"https://dev.to/api/articles/{aid}",
+                             headers={"api-key": k},
+                             json={"article": {"main_image": raw_url(aid, man)}}, timeout=30)
+            if r.status_code == 429:
+                wait = 20 * (attempt + 1)
+                print(f"{aid}  429, waiting {wait}s")
+                time.sleep(wait)
+                continue
+            print(f"{aid}  HTTP {r.status_code}  {raw_url(aid, man)}")
+            break
+        if n < len(todo) - 1:
+            time.sleep(12)
 
 
 if __name__ == "__main__":
     cmd = sys.argv[1]
     rest = sys.argv[2:]
     {"build": cmd_build, "apply": cmd_apply,
-     "recompose": cmd_recompose}.get(cmd, lambda _: cmd_push())(rest)
+     "recompose": cmd_recompose,
+     "gen": cmd_gen}.get(cmd, lambda _: cmd_push())(rest)

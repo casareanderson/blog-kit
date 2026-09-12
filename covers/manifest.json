@@ -287,5 +287,10 @@
   "file": "covers/v2-4580491.png",
   "source": "generated",
   "prompt": "a large graphics card with dual fans lying on an antistatic mat, PCIe connector visible, dust on the shroud"
+ },
+ "4640002": {
+  "source": "generated",
+  "prompt": "a small brushed aluminium single-board computer case with a fan grille sitting on a workbench beside a black usb wall charger, a paper price tag tied to the case, macro photograph, shallow depth of field, dark workshop",
+  "file": "covers/4640002.png"
  }
 }

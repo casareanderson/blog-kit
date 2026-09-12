@@ -2,21 +2,58 @@
  "_note": "Prompts lean on PHYSICAL HARDWARE and objects. SD1.5 renders boards, cables, racks and metal well; it renders text, hands, faces and screen UI badly. Anything needing legible text on a screen is asked for as a glow instead.",
  "_negative": "text, letters, words, watermark, logo, signature, people, person, hands, face, cartoon, illustration, painting, drawing, anime, blurry, lowres, deformed, extra objects, cluttered",
  "_style": ", plain dark studio background, sharp focus, shallow depth of field, macro lens, professional product photography, moody low-key lighting",
- "4620979": {"p": "a mechanical keyboard and a small terminal screen glowing green in a dark room, close up on the keys"},
- "4615294": {"p": "a row of small second-hand objects arranged on a plain table with blank paper price labels beside them"},
- "4612833": {"p": "a small fanless single board computer beside two stacked 3.5 inch hard disk drives, bare circuit board, aluminium heatsink"},
- "4609855": {"p": "a vintage stock ticker tape machine under glass, brass and steel, paper tape curling out"},
- "4604386": {"p": "a wall mounted smart home control panel and a small sensor, matte white plastic, soft indicator light"},
- "4600626": {"p": "a folded newspaper with a small brass padlock resting on top of it"},
- "4599260": {"p": "two identical office desks side by side, one tidy and one cluttered, empty chairs, overhead light"},
- "4596250": {"p": "an overflowing metal letter tray stacked high with unopened envelopes on a desk"},
- "4593582": {"p": "a network patch panel with many coloured ethernet cables neatly routed, rack mounted"},
- "4590655": {"p": "a small heavy steel safe with a single brass key lying in front of it"},
- "4590639": {"p": "a large cork board covered in coloured index cards and pins, arranged in columns"},
- "4590638": {"p": "a server rack full of rackmount servers seen head on, status lights glowing, cable management arms"},
- "4590625": {"p": "a heavy steel door with an electronic access reader mounted beside it, single indicator light"},
- "4590624": {"p": "a wall of financial trading screens showing abstract green and red candlestick charts, out of focus"},
- "4588009": {"p": "a small network router with blinking status lights and an ethernet cable half unplugged"},
- "4580541": {"p": "studio headphones resting on a mixing desk beside faders and knobs"},
- "4580491": {"p": "a large graphics card with dual fans lying on an antistatic mat, PCIe connector visible, dust on the shroud"}
+ "4620979": {
+  "p": "a mechanical keyboard and a small terminal screen glowing green in a dark room, close up on the keys"
+ },
+ "4615294": {
+  "p": "a row of small second-hand objects arranged on a plain table with blank paper price labels beside them"
+ },
+ "4612833": {
+  "p": "a small fanless single board computer beside two stacked 3.5 inch hard disk drives, bare circuit board, aluminium heatsink"
+ },
+ "4609855": {
+  "p": "a vintage stock ticker tape machine under glass, brass and steel, paper tape curling out"
+ },
+ "4604386": {
+  "p": "a wall mounted smart home control panel and a small sensor, matte white plastic, soft indicator light"
+ },
+ "4600626": {
+  "p": "a folded newspaper with a small brass padlock resting on top of it"
+ },
+ "4599260": {
+  "p": "two identical office desks side by side, one tidy and one cluttered, empty chairs, overhead light"
+ },
+ "4596250": {
+  "p": "an overflowing metal letter tray stacked high with unopened envelopes on a desk"
+ },
+ "4593582": {
+  "p": "a network patch panel with many coloured ethernet cables neatly routed, rack mounted"
+ },
+ "4590655": {
+  "p": "a small heavy steel safe with a single brass key lying in front of it"
+ },
+ "4590639": {
+  "p": "a large cork board covered in coloured index cards and pins, arranged in columns"
+ },
+ "4590638": {
+  "p": "a server rack full of rackmount servers seen head on, status lights glowing, cable management arms"
+ },
+ "4590625": {
+  "p": "a heavy steel door with an electronic access reader mounted beside it, single indicator light"
+ },
+ "4590624": {
+  "p": "a wall of financial trading screens showing abstract green and red candlestick charts, out of focus"
+ },
+ "4588009": {
+  "p": "a small network router with blinking status lights and an ethernet cable half unplugged"
+ },
+ "4580541": {
+  "p": "studio headphones resting on a mixing desk beside faders and knobs"
+ },
+ "4580491": {
+  "p": "a large graphics card with dual fans lying on an antistatic mat, PCIe connector visible, dust on the shroud"
+ },
+ "4640002": {
+  "p": "a small brushed aluminium single-board computer case with a fan grille sitting on a workbench beside a black usb wall charger, a paper price tag tied to the case, macro photograph, shallow depth of field, dark workshop"
+ }
 }

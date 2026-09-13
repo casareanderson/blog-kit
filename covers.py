@@ -16,6 +16,11 @@ reach.py ban AI-generated content, and CC0 museum art carries no such problem.
   covers.py build [id ...]   compose banners into ./covers
   covers.py push             commit + push covers/ to GitHub
   covers.py apply [id ...]   set each article's main_image via the dev.to API
+  covers.py gen [id ...]     generate an inset per artprompts.json entry
+  covers.py gen-file KEY "TITLE" "PROMPT"
+                             cover for an article that has NO id yet (queued,
+                             unpublished): covers/pre-KEY.png, committed + pushed,
+                             prints the raw URL for its front matter
 """
 import json
 import os
@@ -304,6 +309,36 @@ def cmd_gen(ids):
     json.dump(man, open(man_path, "w"), indent=1)
 
 
+def cmd_genfile(args):
+    """A cover for an article that does not exist on dev.to yet.
+
+    `gen` is keyed by article id, but a queued post has no id until it is
+    published - and the cover should be there AT publish, when dev.to puts the
+    card in the feed. So this takes the title and prompt directly, keys the file
+    on the queue filename, and pushes just that file.
+    """
+    import re
+    import zlib
+    import comfy
+    if len(args) != 3:
+        sys.exit('usage: covers.py gen-file KEY "TITLE" "PROMPT"')
+    key, title, prompt = args
+    key = re.sub(r"[^a-z0-9-]+", "-", key.lower()).strip("-")
+    spec = json.load(open(PROMPTS))
+    os.makedirs(OUT, exist_ok=True)
+    raw = os.path.join(OUT, f"gen-pre-{key}.png")
+    # Seeded from the key, so the same queued file regenerates identically.
+    comfy.generate(prompt + spec["_style"], spec["_negative"], zlib.crc32(key.encode()) % 2**31, raw)
+    art = {"image_url": "file://" + raw, "artistDisplayName": None, "title": None,
+           "objectDate": None, "_credit": GEN_CREDIT, "_prompt": prompt}
+    rel = f"covers/pre-{key}.png"
+    compose(title, art, os.path.join(ROOT, rel))
+    subprocess.run(["git", "add", rel], cwd=ROOT, check=True)
+    subprocess.run(["git", "commit", "-q", "-m", f"Cover for queued article {key}"], cwd=ROOT, check=False)
+    subprocess.run(["git", "push", "-q", "origin", BRANCH], cwd=ROOT, check=True)
+    print(f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/{rel}")
+
+
 def cmd_push():
     subprocess.run(["git", "add", "covers"], cwd=ROOT, check=True)
     subprocess.run(["git", "commit", "-m",
@@ -368,8 +403,10 @@ def cmd_apply(ids):
 
 
 if __name__ == "__main__":
-    cmd = sys.argv[1]
-    rest = sys.argv[2:]
-    {"build": cmd_build, "apply": cmd_apply,
-     "recompose": cmd_recompose,
-     "gen": cmd_gen}.get(cmd, lambda _: cmd_push())(rest)
+    cmds = {"build": cmd_build, "apply": cmd_apply, "recompose": cmd_recompose,
+            "gen": cmd_gen, "gen-file": cmd_genfile, "push": lambda _: cmd_push()}
+    # ⚠️ An unknown word used to fall through to PUSH (`covers.py --help` committed
+    # and pushed). Now it prints the usage and does nothing.
+    if len(sys.argv) < 2 or sys.argv[1] not in cmds:
+        sys.exit(__doc__)
+    cmds[sys.argv[1]](sys.argv[2:])

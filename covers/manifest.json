@@ -302,5 +302,10 @@
   "source": "generated",
   "prompt": "a small childs bicycle with its training wheels removed lying on a workshop floor next to a compact black home server box with blinking lights, a spanner beside the wheels, photograph, shallow depth of field, warm workshop light",
   "file": "covers/4642600.png"
+ },
+ "4637397": {
+  "source": "generated",
+  "prompt": "a stack of three small black mini pc computers on a metal shelf with glowing green status lights and neatly bundled blue ethernet cables, close-up photograph, shallow depth of field, dark server cupboard",
+  "file": "covers/4637397.png"
  }
 }

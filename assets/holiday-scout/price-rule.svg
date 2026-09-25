@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="470" viewBox="0 0 880 470" font-family="DejaVu Sans, sans-serif">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker></defs>
+  <rect width="880" height="470" fill="#ffffff"/>
+  <text x="440" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#0f172a">One rule: a price may only come from a lookup made this turn</text>
+
+  <rect x="24" y="70" width="170" height="70" rx="10" fill="#f1f5f9" stroke="#94a3b8"/>
+  <text x="109" y="98" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#0f172a">family asks</text>
+  <text x="109" y="120" text-anchor="middle" font-size="12" fill="#334155">"How much is Menorca?"</text>
+
+  <rect x="240" y="60" width="210" height="90" rx="10" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="345" y="86" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1e3a8a">model + tools</text>
+  <text x="345" y="108" text-anchor="middle" font-size="12" fill="#334155">flight_price · hotel_price</text>
+  <text x="345" y="126" text-anchor="middle" font-size="12" fill="#334155">sum_prices · plug-ins</text>
+  <text x="345" y="142" text-anchor="middle" font-size="11" fill="#64748b">(8 lookup rounds max)</text>
+
+  <rect x="496" y="60" width="200" height="90" rx="10" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="596" y="86" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#14532d">verified set</text>
+  <text x="596" y="108" text-anchor="middle" font-size="12" fill="#334155">every number in this</text>
+  <text x="596" y="126" text-anchor="middle" font-size="12" fill="#334155">turn's tool output, the</text>
+  <text x="596" y="142" text-anchor="middle" font-size="12" fill="#334155">question and the profile</text>
+
+  <path d="M194,105 L238,105" stroke="#475569" stroke-width="1.6" marker-end="url(#a)"/>
+  <path d="M450,105 L494,105" stroke="#475569" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <rect x="240" y="210" width="456" height="80" rx="10" fill="#fff7ed" stroke="#f97316" stroke-width="1.6"/>
+  <text x="468" y="238" text-anchor="middle" font-size="14" font-weight="bold" fill="#9a3412">price guard: every £/€ amount in the draft reply</text>
+  <text x="468" y="262" text-anchor="middle" font-size="12.5" fill="#334155">must be in the verified set</text>
+  <path d="M345,150 L345,208" stroke="#475569" stroke-width="1.6" marker-end="url(#a)"/>
+  <text x="352" y="184" font-size="11.5" fill="#64748b">draft reply</text>
+  <path d="M596,150 L596,208" stroke="#16a34a" stroke-width="1.6" stroke-dasharray="5 4" marker-end="url(#a)"/>
+
+  <rect x="24" y="340" width="250" height="100" rx="10" fill="#f0fdf4" stroke="#16a34a"/>
+  <text x="149" y="368" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#14532d">all backed → sent</text>
+  <text x="149" y="392" text-anchor="middle" font-size="12" fill="#334155">"Flights ~£1,281 for the</text>
+  <text x="149" y="410" text-anchor="middle" font-size="12" fill="#334155">whole family"</text>
+
+  <rect x="316" y="340" width="250" height="100" rx="10" fill="#fefce8" stroke="#ca8a04"/>
+  <text x="441" y="368" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#713f12">unbacked → one retry</text>
+  <text x="441" y="392" text-anchor="middle" font-size="12" fill="#334155">back to the model: "look it up,</text>
+  <text x="441" y="410" text-anchor="middle" font-size="12" fill="#334155">or rewrite without it"</text>
+
+  <rect x="608" y="340" width="248" height="100" rx="10" fill="#fef2f2" stroke="#dc2626"/>
+  <text x="732" y="368" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#7f1d1d">still unbacked → redacted</text>
+  <text x="732" y="392" text-anchor="middle" font-size="12" fill="#334155">[price not verified] + "ask</text>
+  <text x="732" y="410" text-anchor="middle" font-size="12" fill="#334155">me to check it"</text>
+
+  <path d="M330,290 L180,338" stroke="#475569" stroke-width="1.6" marker-end="url(#a)"/>
+  <path d="M441,290 L441,338" stroke="#475569" stroke-width="1.6" marker-end="url(#a)"/>
+  <path d="M566,390 L606,390" stroke="#475569" stroke-width="1.6" marker-end="url(#a)"/>
+  <text x="742" y="112" font-size="12" fill="#334155">A child's age is</text>
+  <text x="742" y="130" font-size="12" fill="#334155">sent as a band</text>
+  <text x="742" y="148" font-size="12" fill="#334155">(8-9), never a DOB.</text>
+</svg>

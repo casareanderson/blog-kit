@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="520" viewBox="0 0 880 520" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#59636e"/></marker></defs>
+  <rect width="880" height="520" fill="#ffffff"/>
+  <text x="440" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2328">Two claim checkers, one veto rule</text>
+  <!-- inputs -->
+  <rect x="250" y="56" width="380" height="64" rx="10" fill="#f6f8fa" stroke="#d1d9e0"/>
+  <text x="440" y="84" text-anchor="middle" font-size="16" font-weight="600" fill="#1f2328">Product description + the product's own files</text>
+  <text x="440" y="106" text-anchor="middle" font-size="13" fill="#59636e">claim to check, and the source it has to match</text>
+  <path d="M370 120 L230 170" stroke="#59636e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M510 120 L650 170" stroke="#59636e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <!-- checkers -->
+  <rect x="60" y="172" width="330" height="92" rx="10" fill="#ddf4ff" stroke="#54aeff"/>
+  <text x="225" y="202" text-anchor="middle" font-size="17" font-weight="700" fill="#0550ae">Jev (classifier)</text>
+  <text x="225" y="226" text-anchor="middle" font-size="13.5" fill="#1f2328">gives a probability the claim is supported</text>
+  <text x="225" y="248" text-anchor="middle" font-size="13.5" fill="#59636e">~0.3 s, $0.0018 for all 62</text>
+  <rect x="490" y="172" width="330" height="92" rx="10" fill="#fbefff" stroke="#c297ff"/>
+  <text x="655" y="202" text-anchor="middle" font-size="17" font-weight="700" fill="#6e40c9">DeepSeek (chat check)</text>
+  <text x="655" y="226" text-anchor="middle" font-size="13.5" fill="#1f2328">reads the source, answers PASS or FAIL</text>
+  <text x="655" y="248" text-anchor="middle" font-size="13.5" fill="#59636e">~21 s, sometimes no answer</text>
+  <path d="M225 264 L380 314" stroke="#59636e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M655 264 L500 314" stroke="#59636e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <!-- rule -->
+  <rect x="200" y="316" width="480" height="104" rx="10" fill="#fff8c5" stroke="#d4a72c"/>
+  <text x="440" y="344" text-anchor="middle" font-size="17" font-weight="700" fill="#1f2328">Veto rule</text>
+  <text x="440" y="370" text-anchor="middle" font-size="14" fill="#1f2328">If either checker says FAIL, it fails (Jev under 0.5 = FAIL)</text>
+  <text x="440" y="395" text-anchor="middle" font-size="14" fill="#1f2328">If DeepSeek says nothing, Jev alone must be 0.8 or above</text>
+  <path d="M340 420 L230 462" stroke="#1a7f37" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <path d="M540 420 L650 462" stroke="#cf222e" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <rect x="110" y="464" width="240" height="44" rx="10" fill="#dafbe1" stroke="#4ac26b"/>
+  <text x="230" y="492" text-anchor="middle" font-size="16" font-weight="700" fill="#1a7f37">Publish</text>
+  <rect x="530" y="464" width="240" height="44" rx="10" fill="#ffebe9" stroke="#ff8182"/>
+  <text x="650" y="492" text-anchor="middle" font-size="16" font-weight="700" fill="#cf222e">Hold for a fix</text>
+</svg>

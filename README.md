@@ -8,6 +8,17 @@ Write technical posts as files, illustrate them, and publish them to dev.to from
 
 ![Licence: MIT](https://img.shields.io/badge/licence-MIT-blue) ![Python 3](https://img.shields.io/badge/python-3-informational)
 
+## Contents
+
+- [What it does](#what-it-does)
+- [Screenshots](#screenshots)
+- [Quick start](#quick-start)
+- [Usage](#usage)
+- [Configuration](#configuration)
+- [How it works](#how-it-works)
+- [Status, limits and real results](#status-limits-and-real-results)
+- [Licence and credits](#licence-and-credits)
+
 ## What it does
 
 - **Publishes a front-matter Markdown file to dev.to** over the Forem API (`publish.py`). It is a dry run unless you type `--publish`.

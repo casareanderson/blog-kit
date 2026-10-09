@@ -172,3 +172,5 @@ MIT — see [LICENSE](LICENSE).
 - Banner type: [IBM Plex](https://github.com/IBM/plex) (SIL Open Font License 1.1).
 - Painting path: [The Metropolitan Museum of Art Open Access API](https://metmuseum.github.io/), public-domain (CC0) images.
 - Diagrams: [librsvg](https://gitlab.gnome.org/GNOME/librsvg) (`rsvg-convert`, LGPL-2.1).
+
+If this is useful to you, [buy me a coffee](https://buymeacoffee.com/iamc_tech) ☕

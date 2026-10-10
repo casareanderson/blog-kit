@@ -335,6 +335,8 @@ def cmd_genfile(args):
     compose(title, art, os.path.join(ROOT, rel))
     subprocess.run(["git", "add", rel], cwd=ROOT, check=True)
     subprocess.run(["git", "commit", "-q", "-m", f"Cover for queued article {key}"], cwd=ROOT, check=False)
+    # 10-09/10-10 covers never reached GitHub: the remote had README commits and the push was rejected
+    subprocess.run(["git", "pull", "-q", "--rebase", "origin", BRANCH], cwd=ROOT, check=True)
     subprocess.run(["git", "push", "-q", "origin", BRANCH], cwd=ROOT, check=True)
     print(f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/{rel}")
 
@@ -344,6 +346,8 @@ def cmd_push():
     subprocess.run(["git", "commit", "-m",
                     "Add dev.to cover banners from Art Institute public-domain art"],
                    cwd=ROOT, check=False)
+    # 10-09/10-10 covers never reached GitHub: the remote had README commits and the push was rejected
+    subprocess.run(["git", "pull", "-q", "--rebase", "origin", BRANCH], cwd=ROOT, check=True)
     subprocess.run(["git", "push", "origin", BRANCH], cwd=ROOT, check=True)
 
 

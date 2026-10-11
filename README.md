@@ -6,7 +6,7 @@ Write technical posts as files, illustrate them, and publish them to dev.to from
 
 *A real cover from this repo (`covers/v2-4593582.png`): the inset is generated locally with Stable Diffusion 1.5, the title and credit are laid out by `covers.py`.*
 
-![Licence: MIT](https://img.shields.io/badge/licence-MIT-blue) ![Python 3](https://img.shields.io/badge/python-3-informational)
+![Licence: MIT](https://img.shields.io/badge/licence-MIT-blue) ![Python 3](https://img.shields.io/badge/python-3-informational) [![Buy Me a Coffee](https://raw.githubusercontent.com/casareanderson/.github/main/badges/bmc-yellow.svg)](https://buymeacoffee.com/iamc_tech)
 
 ## Contents
 

@@ -41,6 +41,8 @@ Write technical posts as files, illustrate them, and publish them to dev.to from
 
 ## Quick start
 
+Full step-by-step setup, tested every week on a fresh machine: [docs/SETUP.md](docs/SETUP.md).
+
 Prerequisites: Python 3 (`publish.py` uses the standard library only). For diagrams, `rsvg-convert` from `librsvg2-bin`.
 
 ```bash

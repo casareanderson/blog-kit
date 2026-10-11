@@ -8,6 +8,11 @@ The blocks marked as tested run on a fresh Ubuntu runner every week in
 [`setup-check`](../.github/workflows/setup-check.yml). Anything that talks to dev.to needs your API key, so CI
 proves everything up to the point of sending and stops there.
 
+
+![What a passing run looks like on a fresh machine (excerpt from `setup-check` on 11 October 2026). Secrets in the output are masked](setup-run.png)
+
+*What a passing run looks like on a fresh machine (excerpt from `setup-check` on 11 October 2026). Secrets in the output are masked.*
+
 ## What you need
 
 - Python 3. `publish.py` uses the standard library only.

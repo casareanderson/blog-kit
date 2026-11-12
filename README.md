@@ -176,3 +176,7 @@ MIT — see [LICENSE](LICENSE).
 - Diagrams: [librsvg](https://gitlab.gnome.org/GNOME/librsvg) (`rsvg-convert`, LGPL-2.1).
 
 If this is useful to you, [buy me a coffee](https://buymeacoffee.com/iamc_tech) ☕
+
+---
+
+More homelab field notes: https://iamtech.cn1-lab.uk
